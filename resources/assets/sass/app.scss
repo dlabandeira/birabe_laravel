@@ -1,6 +1,6 @@
 
 // Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600");
 
 // Variables
 @import "variables";
@@ -8,5 +8,8 @@
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
-// Dani
-@import "dani";
+// Layout
+@import "layout"; 
+
+// Posts
+@import "posts";

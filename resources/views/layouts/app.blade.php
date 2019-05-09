@@ -12,16 +12,46 @@
 
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-        <link href="{{ asset('css/prueba.css') }}" rel="stylesheet">
     </head>
 
     <body>
         <div id="app">
-            @include('home.menu')
-            @include('home.left')
-            @yield('content')
-            @include('home.right')
-            @include('home.chat')
+
+            <header>
+                @include('home.menu')
+            </header>
+            
+            <div class="container_body">
+                <div class="container-fluid">
+                    <div class="row">
+                        @if (!Auth::guest())
+                            <section class="col-xs-12 col-md-2">
+                                @include('home.left')
+                            </section>
+
+                            <div class="content col-xs-12 col-md-5">
+                                @yield('content')
+                            </div>
+                            
+                            <section class="col-xs-12 col-md-3">
+                                @include('home.right')
+                            </section>
+                            
+                            <section class="col-xs-12 col-md-2">
+                                @include('home.chat')
+                            </section>
+                        @else
+                            <div class="content col-xs-12">
+                                @yield('content')
+                            </div>
+                        @endif
+                    </div>
+                </div>
+            </div>
+
+            <footer>
+                 @include('home.footer')
+            </footer>
         </div>
 
         <!-- Scripts -->

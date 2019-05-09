@@ -1,0 +1,91 @@
+ul{
+	list-style-type: none;
+}
+
+#app{
+	z-index: 1;
+	
+	header{
+		width: 100%;
+		position:fixed;
+		top: 0;
+		left: 0;
+		z-index: 500;
+
+		.navbar-default{
+			background:$color1 !important; 
+			border: none;
+			
+		}
+		.navbar-brand,
+		.dropdown-toggle{
+			color: $white;
+		}
+	}
+
+	footer{
+		width: 100%;
+		height: 10vh;
+		/*position:fixed;
+		bottom: 0;
+		left: 0;*/
+
+		 background: black;
+	}
+
+	.container_body{
+		width: 100%;
+		margin-top:8vh;
+		padding-top: 3vh;
+		height: auto;
+		overflow: auto;
+		position: relative;
+	}
+
+
+	.right,
+	.chat{
+		padding-top: $padding-peque;
+		padding-bottom: $padding-peque;
+		height: 75vh;
+		background: $white;
+		border:1px solid $laravel-border-color;
+		border-radius:$border-radius;
+	}
+	.left{
+		padding-top: $padding-peque;
+		padding-bottom: $padding-peque;
+		margin:0;
+		padding:0;
+		height: 50vh;
+
+		.menu-lateral{
+			position: fixed;
+			top: 80px;
+			margin:0;
+			padding:0;
+		}
+	}
+	.content{
+		height: auto;
+
+		.image-upload > input
+			{
+			   display: none;
+			}
+
+			.image-upload img
+			{
+			    width: 30px;
+			    height: 30px;
+			    cursor: pointer;
+			}
+	}
+
+}
+
+.form-control-custom{
+	width: 100%;
+	height: auto;
+	border:none;
+}

@@ -30,6 +30,9 @@
                             <li><a href="{{ route('register') }}">Registro</a></li>
                         @else
                             <li class="dropdown">
+                                {{--<div style="width: 15px"> 
+                                @include('home.profile-image', array('image' =>  Auth::user()->image))
+                                </div>--}}
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>

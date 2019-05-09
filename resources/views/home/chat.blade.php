@@ -1,1 +1,1 @@
-Chat
+<p class="col-xs-12 chat">Esto es la chat</p>

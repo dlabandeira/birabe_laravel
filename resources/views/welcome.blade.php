@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    De lo bizarro, lo raro y lo bello
                 </div>
 
                 <div class="links">

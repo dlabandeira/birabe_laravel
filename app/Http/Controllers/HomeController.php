@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Post;
+use Response;
+use Storage;
 
 class HomeController extends Controller
 {
@@ -26,8 +28,15 @@ class HomeController extends Controller
     public function index()
     {
         $posts = Post::all()->sortByDesc("id");
+
         return view('home',array(
             'posts'=>$posts
         ));
+    }
+
+    public function getUserImage($filename){
+
+       $file =  Storage::disk('profiles')->get($filename);
+       return Response($file);
     }
 }

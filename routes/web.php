@@ -32,4 +32,13 @@ Route::get('posts/delete/{id}', array(
 		'middleware'=> 'auth',
 		'uses'=> 'PostController@delete'
 ));
-//Route::resource("posts","PostController"); 
+
+Route::get('images_post/{filename}', array(
+		'as' => 'getPostImage',
+		'uses'=> 'PostController@getPostImage'
+));
+
+Route::get('profiles/{filename}', array(
+		'as' => 'getUserImage',
+		'uses'=> 'HomeController@getUserImage'
+));

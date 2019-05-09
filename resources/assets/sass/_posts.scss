@@ -1,0 +1,40 @@
+.panel-posts{
+	/*background: blue;*/
+	
+	.panel-new{
+		background: $white;
+		border:1px solid $laravel-border-color;
+		border-radius:$border-radius;
+
+		.panel-heading{
+			background: $background-light;
+		}
+		.panel-body{
+			
+		}
+
+		
+	}
+	
+	.panel-list{
+		padding: 0;
+		padding-bottom: $padding-grande*2;
+		margin:0;
+		
+		.panel-post{
+			margin-top: 20px;
+			background: $white;
+			border:1px solid $laravel-border-color;
+			border-radius:$border-radius;
+			padding: 3%;
+
+				.panel-post-image{
+					width: 106%;
+					margin-left: -3%;
+				}
+			}
+	}
+	.panel-comments{
+		background: blue;
+	}
+}
