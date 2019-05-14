@@ -1,66 +1,61 @@
-<form action="{{ route('createPost') }}" method="post" id="post-form" enctype="multipart/form-data">
+<form action="{{ route('createComment') }}" method="post" id="comment-form" class="comment-form" enctype="multipart/form-data">
+  
   <input type="hidden" name="_token" value="{{ csrf_token() }}">
-  <div class="row">
-    
+
+  <input type="hidden" name="comment-post-id" value="{{ $post_id }}">
+
     <!--Imagen -->
-    <div class="col-xs-2">
+    <div class="col-xs-1 text-center comment-image">
       @include('home.profile-image', array('image' => $user['image']))
     </div>
     
     <!--Contenido -->
-    <div class="col-xs-10">
-      <textarea type="text" class="form-control-custom" id="post-content" name="post-content" placeholder="¿En qué estás pensando?" required ></textarea>
+    <div class="col-xs-7">
+      <textarea type="text" class="form-control-custom" name="comment-content" placeholder="Escribe tu comentario" required ></textarea>
     </div>  
     
-    <div class="col-xs-12">
-      <hr />
-    </div>
     
     <!--Barra opciones -->
-    <div class="col-xs-12">
+    <div class="col-xs-4">
       <ul class="nav ">
         
-        <li class="nav-item col-xs-3">
+        <li class="nav-item col-xs-1">
           <div class="image-upload">
             <label for="image-post">
               <i class="fas fa-camera"></i>
-              <span>Foto</span>
             </label>
             <input id="image-post" name="image-post" type="file"/>
           </div>
         </li>
 
-        <li class="nav-item col-xs-3 ">
+        <li class="nav-item col-xs-1 ">
           <div class="image-upload">
             <label for="video-post">
               <i class="fas fa-video"></i>
-              <span>Video</span>
             </label>
             <input id="video-post" name="video-post" type="file"/>
           </div>
         </li>
 
-        <li class="nav-item col-xs-3 ">
+        <li class="nav-item col-xs-1 ">
           <div class="image-upload">
             <label for="gif-post">
               <i class="fas fa-grin"></i>
-              <span>Gifs</span>
             </label>
             <input id="gif-post" name="gif-post" type="file"/>
           </div>
         </li>
 
-        <li class="nav-item col-xs-3 ">
+        <li class="nav-item col-xs-1 ">
           <div class="image-upload">
             <label for="tag-post">
               <i class="fas fa-id-card"></i>
-              <span>Etiqueta</span>
             </label>
             <input id="tag-post" name="tag-post" type="file"/>
           </div>
         </li>
       
       </ul>
-    </div>
+
 </div>
 </form>

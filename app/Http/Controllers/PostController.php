@@ -24,10 +24,21 @@ class PostController extends Controller
 		//Subir el archivo
 		$image = $request->file('image-post');
 		if($image){
-			//$image_path = time()."_".$image->getClientOriginalName();
-			$image_path = time()."_".$image->getClientOriginalName();
+			$image_tmp = $image->getClientOriginalName();
+			$extension = explode('.',$image_tmp);
+			$image_path = "i".time().time().".".$extension[1];
 			storage::disk('images')->put($image_path, \File::get($image));
 			$post->image = $image_path;
+		}
+
+		//Subir el video
+		$video = $request->file('video-post');
+		if($video){
+			$video_tmp = $video->getClientOriginalName();
+			$extension = explode('.',$video_tmp);
+			$video_path = "v".time().time().".".$extension[1];
+			storage::disk('videos')->put($video_path, \File::get($video));
+			$post->video_path = $video_path;
 		}
 
 		$post->save();
@@ -38,7 +49,21 @@ class PostController extends Controller
 
 		//DB::table('posts')->where('id',$id)->delete();
 		$post = Post::find($id);
+		
+		//Borro la imagen si la tiene
+		if(storage::disk('images')->has($post->image)){
+			storage::disk('images')->delete($post->image);
+		}
+
+		//Borro la imagen si la tiene
+		if(storage::disk('videos')->has($post->video_path)){
+			storage::disk('videos')->delete($post->video_path);
+		}
+
+		//Elimino el registro en la base de datos
 		$post->delete();
+
+		//Muestro de nuevo el listado
 		return redirect('/home')->with('status','El mensaje se ha borrado correctamente');;
 	}
 
@@ -47,7 +72,9 @@ class PostController extends Controller
 		return Response($file);
 	}
 
-	public function diffForHumans(){
-		echo "tiempo";
+	public function getPostVideo($filename){
+		$file =  storage::disk('videos')->get($filename);
+		return Response($file);
 	}
+
 }

@@ -1,3 +1,17 @@
+.form-control-custom{
+	width: 100%;
+	min-height: 60px;
+	height: auto;
+	border:none;
+	resize: none;
+}
+.form-control-custom-min{
+	width: 100%;
+	height: auto;
+	border:none;
+	resize: none;
+}
+
 .panel-posts{
 	/*background: blue;*/
 	
@@ -12,7 +26,12 @@
 		.panel-body{
 			
 		}
-
+		
+		.img-profile{
+			width: 60px !important;
+			height: 60px !important;
+			border-radius:50%;
+		}
 		
 	}
 	
@@ -21,20 +40,41 @@
 		padding-bottom: $padding-grande*2;
 		margin:0;
 		
+		.separator{
+
+			hr{	
+				margin-top: $padding-peque/2;
+				margin-bottom: $padding-peque/2;
+			}
+		}
 		.panel-post{
 			margin-top: 20px;
 			background: $white;
 			border:1px solid $laravel-border-color;
 			border-radius:$border-radius;
 			padding: 3%;
+				
+				.panel-post-text{
+					color:$text-color-dark;
+					margin-top: $padding-medio;
+					margin-bottom: $padding-medio;
+				}
 
 				.panel-post-image{
-					width: 106%;
-					margin-left: -3%;
+					width: 106% !important;
+					margin-left: -3%  !important;
+					margin-bottom: $padding-peque;
+				}
+
+				.img-profile{
+					width: 60px;
+					height: 60px;
+					border-radius:50%;
 				}
 			}
+
+
 	}
 	.panel-comments{
-		background: blue;
 	}
 }

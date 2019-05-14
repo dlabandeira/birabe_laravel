@@ -23,6 +23,7 @@ $font-family-sans-serif: "Montserrat", sans-serif;
 $font-size-base: 14px;
 $line-height-base: 1.6;
 $text-color: #636b6f;
+$text-color-dark: #111;
 
 // Navbar
 $navbar-default-bg: #fff;
@@ -43,7 +44,9 @@ $white: #fff;
 $background-light: #f5f8fa;
 
 //Colors
-$color1: #0b787d;
+$color: #ff1143;
+$color-dark: darken($color,20%);
+$color-light: lighten($color,10%);
 
 //Paddings
 $padding-peque: 10px;

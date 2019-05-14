@@ -2,22 +2,22 @@
 	<div class="menu-lateral ">
 	<ul class="nav flex-column">
 		<li class="nav-item">
-			<a class="nav-link active" href="#">@include('home.profile-image', array('image' =>  Auth::user()->image))</a>
+			<a class="nav-link active text-center" href="#">@include('home.profile-image', array('image' =>  Auth::user()->image))</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link active" href="#">{{Auth::user()->name}} {{Auth::user()->surname}}</a>
+			<a class="nav-link" href="#"><i class="fas fa-id-card"></i>Cosas</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" href="#">Noticias</a>
+			<a class="nav-link" href="#"><i class="fas fa-comment-alt"></i>Noticias</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" href="#">Messenger</a>
+			<a class="nav-link" href="#"><i class="fas fa-at"></i>Messenger</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link disabled" href="#">Chat</a>
+			<a class="nav-link disabled" href="#"><i class="fas fa-comments"></i>Chat</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link disabled" href="#">Administrar</a>
+			<a class="nav-link disabled" href="#"><i class="fas fa-highlighter"></i>Administrar</a>
 		</li>
 		<li class="nav-item">
 			<form>

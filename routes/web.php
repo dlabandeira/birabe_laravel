@@ -33,12 +33,22 @@ Route::get('posts/delete/{id}', array(
 		'uses'=> 'PostController@delete'
 ));
 
-Route::get('images_post/{filename}', array(
+Route::get('images/{filename}', array(
 		'as' => 'getPostImage',
 		'uses'=> 'PostController@getPostImage'
+));
+Route::get('videos/{filename}', array(
+		'as' => 'getPostVideo',
+		'uses'=> 'PostController@getPostVideo'
 ));
 
 Route::get('profiles/{filename}', array(
 		'as' => 'getUserImage',
 		'uses'=> 'HomeController@getUserImage'
+));
+
+Route::post('comments/create',array(
+	'as' => 'createComment',
+	'middleware'=> 'auth',
+	'uses' => 'CommentsController@create',
 ));
