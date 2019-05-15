@@ -9,7 +9,21 @@ a{
 ul{
 	list-style-type: none;
 }
+.font-bold{
+	font-weight: 600;
+}
+.separator{
+			margin-top: $padding-peque/2;
+				margin-bottom: $padding-peque/2;
 
+			hr{	
+				margin-top: $padding-peque/2;
+				margin-bottom: $padding-peque/2;
+				padding-top: 0;
+				padding-bottom: 0;
+			}
+		}
+		
 #app{
 	z-index: 1;
 	
@@ -55,7 +69,8 @@ ul{
 	.chat{
 		padding-top: $padding-peque;
 		padding-bottom: $padding-peque;
-		height: 75vh;
+		min-height: 75vh;
+		height: auto;
 		background: $white;
 		border:1px solid $laravel-border-color;
 		border-radius:$border-radius;
@@ -72,20 +87,24 @@ ul{
 			top: 80px;
 			margin:0;
 			padding:0;
+			
+			.nav{
+				display: inline-block;
 
-			.nav-item{
-				padding:0;
-				margin:2px 0;
+				.nav-item{
+					padding:0;
+					margin:2px 0;
 
-				a{
-					padding-top:$padding-peque/2;
-					padding-bottom:$padding-peque/2;
-					font-weight: 500;
-					color: $text-color-dark;
+					a{
+						padding-top:$padding-peque/2;
+						padding-bottom:$padding-peque/2;
+						font-weight: 500;
+						color: $text-color-dark;
 
-					i{
-						margin-right: $padding-peque;
-						color: $color;
+						i{
+							margin-right: $padding-peque;
+							color: $color;
+						}
 					}
 				}
 			}
@@ -103,20 +122,22 @@ ul{
 		.image-upload{
 			width: 100%;
 			display: inline-block;
-			cursor: pointer;
 			text-align: center;
 
 			i{
 				color: $color;
+				cursor: pointer;
 			}
 			span{
 				font-weight: normal;
 				padding-left: 5px;
+				cursor: pointer;
 			}
 		}
 		.image-upload > input
 			{
 			   display: none;
+			   cursor: pointer;
 			}
 
 			.image-upload img

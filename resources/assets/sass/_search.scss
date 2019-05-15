@@ -1,0 +1,67 @@
+.search-list{
+	background: $white;
+	border:1px solid $laravel-border-color;
+	border-radius:$border-radius;
+	margin:0 0 $padding-medio 0;
+	padding: $padding-peque $padding-peque $padding-medio $padding-peque;
+	
+	.search-image{
+		.img-profile{
+			width: 45px !important;
+			height: 45px !important;
+			border-radius:50%;
+		}
+	}
+
+	.search-data{
+		margin:0;
+		padding: 0;
+		font-size: 0.9em;
+
+		p{
+			margin: $padding-peque/4 0 0 0;
+		}
+	}
+
+	.search-item{
+		margin:0;
+		padding:0;
+
+		.search-text{
+			font-size: 0.95em;
+			color:$text-color-dark;
+		}
+
+		.search-image, .search-video{
+
+		}
+	}
+}
+
+/***************************** BUSCADOR *************************/
+.search{
+	margin:0;
+	padding:0;
+	display: block;
+
+	.form-search{
+		width: 77%; 
+		display: inline-block;
+		margin:0;
+		margin-top: $padding-grande;
+		padding:$padding-peque/2 5% $padding-peque/2 0;
+		border:1px solid $laravel-border-color;
+		border-radius:$border-radius;
+		background: $white;
+
+		input{
+			
+			border:none;
+		}
+		.btn-submit{
+			margin:0;
+			padding:0;
+			background: none;
+		}
+	}
+}

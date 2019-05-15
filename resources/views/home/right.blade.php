@@ -1,2 +1,10 @@
-<p class="col-xs-12 right">Esto es la derecha</p>
+<div class="col-xs-12 right">
+
+	<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consectetur est non elit posuere, vitae rhoncus nulla dictum. Curabitur vestibulum est et felis pulvinar, ac luctus lacus finibus. Morbi nec tortor nec lacus consectetur tincidunt. Maecenas quis libero gravida, laoreet odio eu, vehicula ex. Praesent gravida sollicitudin ultrices. Phasellus varius ornare rutrum. Morbi malesuada non ipsum non dapibus. Nulla placerat rutrum felis. Sed efficitur volutpat nibh, consequat dapibus dolor fringilla eu. Pellentesque eleifend eu mi accumsan maximus. Praesent at dolor id orci gravida efficitur. Ut ut risus ac risus gravida ultrices eget et dolor. Vestibulum pulvinar libero vitae leo dapibus, ut consectetur enim aliquam. Praesent porttitor odio sed quam varius sagittis. Proin imperdiet posuere finibus. Praesent egestas quam ut vestibulum elementum.</p>
+
+	<p class="text-justify">Sed ut elit quis diam egestas auctor ut non sem. In dapibus turpis eu ultricies luctus. Integer quis ornare nisl, a sagittis felis. Aenean nibh erat, suscipit auctor tempus non, dictum vel odio. Morbi cursus felis sit amet volutpat porta. Integer ac lacus tristique, dapibus lacus sit amet, pharetra justo. Vestibulum volutpat eros vitae sapien volutpat, at fringilla elit porttitor. Nulla laoreet vel dolor vitae sagittis.</p>
+
+	<p class="text-justify">Nullam luctus turpis non augue tempor, et ultrices sem blandit. In a iaculis leo. Donec quis cursus ipsum. Pellentesque quam erat, venenatis vitae egestas non, vestibulum nec augue. Nulla sed justo laoreet, tempor lacus et, tristique sem. In euismod sollicitudin lectus. Sed sagittis, erat sit amet dignissim congue, quam quam finibus purus, a lobortis ligula neque in neque. Nunc nec orci at ipsum porttitor rhoncus ut non odio. Etiam dictum neque massa, eget pulvinar odio pulvinar aliquam. Nulla facilisi. Quisque vulputate ultrices accumsan. Sed interdum, justo ullamcorper pharetra euismod, enim nibh consequat felis, at faucibus ante ligula quis massa. Duis tempus tortor eu varius scelerisque. Praesent iaculis venenatis sem, ut consectetur tortor pretium quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et lacus vulputate, maximus metus vel, euismod nisi.</p>
+
+</div>
 

@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
-/*use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\DB;
+/*use Illuminate\Support\Facades\Storage;
 use Symfony\Component\HttpFoundation\Response;*/
 
 use App\Post;
@@ -48,8 +48,13 @@ class PostController extends Controller
 	public function delete($id, Request $request){
 
 		//DB::table('posts')->where('id',$id)->delete();
+
+		//Borro los comentarios asociados al post
+		$comments = DB::table('comments')->where('post_id',$id)->delete();
+
+		//Preparo el post
 		$post = Post::find($id);
-		
+
 		//Borro la imagen si la tiene
 		if(storage::disk('images')->has($post->image)){
 			storage::disk('images')->delete($post->image);

@@ -13,6 +13,7 @@ class CommentsController extends Controller
     	$comment = new Comment();
 		$comment->body = $request->Input('comment-content');
 		$comment->post_id = $request->Input('comment-post-id');
+		$comment->comment_id = $request->Input('comment-parent-id');
 		$comment->user_id = auth()->user()->id;
 
 		//Subir el archivo

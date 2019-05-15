@@ -8347,6 +8347,22 @@ ul {
   list-style-type: none;
 }
 
+.font-bold {
+  font-weight: 600;
+}
+
+.separator {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.separator hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 #app {
   z-index: 1;
 }
@@ -8391,7 +8407,8 @@ ul {
 #app .chat {
   padding-top: 10px;
   padding-bottom: 10px;
-  height: 75vh;
+  min-height: 75vh;
+  height: auto;
   background: #fff;
   border: 1px solid #d3e0e9;
   border-radius: 3px;
@@ -8412,19 +8429,23 @@ ul {
   padding: 0;
 }
 
-#app .left .menu-lateral .nav-item {
+#app .left .menu-lateral .nav {
+  display: inline-block;
+}
+
+#app .left .menu-lateral .nav .nav-item {
   padding: 0;
   margin: 2px 0;
 }
 
-#app .left .menu-lateral .nav-item a {
+#app .left .menu-lateral .nav .nav-item a {
   padding-top: 5px;
   padding-bottom: 5px;
   font-weight: 500;
   color: #111;
 }
 
-#app .left .menu-lateral .nav-item a i {
+#app .left .menu-lateral .nav .nav-item a i {
   margin-right: 10px;
   color: #ff1143;
 }
@@ -8442,21 +8463,23 @@ ul {
 #app .content .image-upload {
   width: 100%;
   display: inline-block;
-  cursor: pointer;
   text-align: center;
 }
 
 #app .content .image-upload i {
   color: #ff1143;
+  cursor: pointer;
 }
 
 #app .content .image-upload span {
   font-weight: normal;
   padding-left: 5px;
+  cursor: pointer;
 }
 
 #app .content .image-upload > input {
   display: none;
+  cursor: pointer;
 }
 
 #app .content .image-upload img {
@@ -8465,10 +8488,136 @@ ul {
   cursor: pointer;
 }
 
+.search-list {
+  background: #fff;
+  border: 1px solid #d3e0e9;
+  border-radius: 3px;
+  margin: 0 0 20px 0;
+  padding: 10px 10px 20px 10px;
+}
+
+.search-list .search-image .img-profile {
+  width: 45px !important;
+  height: 45px !important;
+  border-radius: 50%;
+}
+
+.search-list .search-data {
+  margin: 0;
+  padding: 0;
+  font-size: 0.9em;
+}
+
+.search-list .search-data p {
+  margin: 2.5px 0 0 0;
+}
+
+.search-list .search-item {
+  margin: 0;
+  padding: 0;
+}
+
+.search-list .search-item .search-text {
+  font-size: 0.95em;
+  color: #111;
+}
+
+/***************************** BUSCADOR *************************/
+
+.search {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.search .form-search {
+  width: 77%;
+  display: inline-block;
+  margin: 0;
+  margin-top: 30px;
+  padding: 5px 5% 5px 0;
+  border: 1px solid #d3e0e9;
+  border-radius: 3px;
+  background: #fff;
+}
+
+.search .form-search input {
+  border: none;
+}
+
+.search .form-search .btn-submit {
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+
+.btn-success {
+  background: #ff1143;
+  border-color: #aa0024;
+}
+
+.btn-success:hover {
+  background: #ff446b;
+  border-color: #ff1143;
+}
+
+.preview {
+  width: 100%;
+  float: left;
+  margin-top: 10px;
+  position: relative;
+  display: none;
+}
+
+.preview .preview-item {
+  width: 33.33%;
+  height: 120px;
+  overflow: hidden;
+  float: left;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.preview .preview-item img,
+.preview .preview-item video {
+  width: 100%;
+}
+
+.preview .preview-item:hover::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  content: "QUITAR";
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.8);
+  color: #ff1143;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .form-control-custom {
   width: 100%;
-  min-height: 60px;
-  height: auto;
+  height: 60px;
   border: none;
   resize: none;
 }
@@ -8482,6 +8631,10 @@ ul {
 
 .panel-posts {
   /*background: blue;*/
+}
+
+.panel-posts .post-item-link {
+  font-weight: 600;
 }
 
 .panel-posts .panel-new {
@@ -8504,11 +8657,6 @@ ul {
   padding: 0;
   padding-bottom: 60px;
   margin: 0;
-}
-
-.panel-posts .panel-list .separator hr {
-  margin-top: 5px;
-  margin-bottom: 5px;
 }
 
 .panel-posts .panel-list .panel-post {
@@ -8537,30 +8685,69 @@ ul {
   border-radius: 50%;
 }
 
+.nav-links {
+  font-size: 0.95em;
+}
+
+.nav-links li.nav-item {
+  height: 22px;
+  margin: 0;
+  padding: 0;
+}
+
+/********************************************/
+
+.post-list {
+  background: blue;
+}
+
+.post-list .post-data {
+  margin: 0;
+  padding: 0;
+  margin-top: 5px;
+  font-size: 0.9em;
+}
+
+.post-list .post-data p {
+  margin: 2.5px 0 0 0;
+}
+
 .comment-form {
   margin-top: 20px;
 }
 
 .comment-form .comment-image {
   margin: 0;
-  padding: 0;
 }
 
 .comment-form .img-profile {
   width: 25px !important;
   height: 25px !important;
   border-radius: 50%;
+  padding: 0;
+  margin-left: 5px;
+}
+
+.comments-panel-children {
+  font-size: 1em !important;
+}
+
+.comments-panel-children .comments-item:first-child {
+  padding-top: 15px !important;
 }
 
 .comments-panel {
-  margin-top: 20px;
   font-size: 0.9em;
 }
 
 .comments-panel .comments-item {
   width: 100%;
   display: inline-block;
-  margin-bottom: 10px;
+  margin: 0;
+  padding: 0;
+  padding-top: 5px !important;
+  margin-bottom: 0 !important;
+  /*margin-bottom: $padding-peque;*/
 }
 
 .comments-panel .comments-item .comment-item-image {
@@ -8584,7 +8771,7 @@ ul {
 
 .comments-panel .comments-item .comment-item-text a {
   display: inline;
-  color: #aa0024;
+  color: #ff1143;
   font-weight: 600;
 }
 
@@ -8595,7 +8782,20 @@ ul {
   font-size: 1em;
 }
 
+.comments-panel .comments-item .comment-item-new {
+  display: none;
+}
+
 .comments-panel .comments-item .comment-item-buttons a {
-  color: #ff446b;
+  font-size: 0.9em;
+  color: #aa0024;
+}
+
+.comments-panel .comments-item .comment-item-buttons a:hover {
+  text-decoration: underline;
+}
+
+.comments-panel .comments-item .comment-item-buttons span.publish {
+  font-size: 0.9em;
 }
 

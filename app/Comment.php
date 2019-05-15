@@ -13,4 +13,9 @@ class Comment extends Model
     	return $this->belongsTo('App\User','user_id');
     }
 
+    public function comments(){
+    	return $this->hasMany('App\Comment','comment_id')->orderBy('id','asc');
+    }
+
+
 }

@@ -3,24 +3,36 @@
 
 	.comment-image{
 		margin:0;
-		padding:0;
+
 	}
 	.img-profile{
 		width: 25px !important;
 		height: 25px !important;
 		border-radius:50%;
+		padding:0;
+		margin-left: 5px;
 	}
 }
+.comments-panel-children{
+	font-size: 1em !important;
 
+	.comments-item:first-child{
+		padding-top: 15px !important;
+	}
+}
 .comments-panel{
-	margin-top: $padding-medio;
+	
 	font-size: 0.9em;
 	
 
 	.comments-item{
 		width: 100%;
 		display: inline-block;
-		margin-bottom: $padding-peque;
+		margin:0;
+		padding:0;
+		padding-top: 5px !important;
+		margin-bottom: 0 !important;
+		/*margin-bottom: $padding-peque;*/
 		
 		.comment-item-image{
 			margin:5px 0;
@@ -41,7 +53,7 @@
 			
 			a{
 				display: inline;
-				color: $color-dark;
+				color: $color;
 				font-weight: 600;
 				
 			}
@@ -53,11 +65,22 @@
 
 			}
 		}
-
+		
+		.comment-item-new{
+			display: none;
+		}
 		.comment-item-buttons{
 
 			a{
-				color: $color-light;
+				font-size: 0.9em;
+				color: $color-dark;
+
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+			span.publish{
+				font-size: 0.9em;
 			}
 		}
 	}

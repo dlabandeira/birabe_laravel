@@ -12,6 +12,9 @@
 */
 
 Route::get('/', function () {
+	if (Auth::check()){
+		return redirect('/home');
+	}
     return view('welcome');
 });
 
@@ -51,4 +54,11 @@ Route::post('comments/create',array(
 	'as' => 'createComment',
 	'middleware'=> 'auth',
 	'uses' => 'CommentsController@create',
+));
+
+
+Route::post('/buscador',array(
+	'as' => 'buscador',
+	'middleware' => 'auth',
+	'uses' => 'HomeController@search',
 ));
