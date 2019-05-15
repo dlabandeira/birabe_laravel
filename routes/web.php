@@ -53,7 +53,7 @@ Route::get('profiles/{filename}', array(
 Route::post('comments/create',array(
 	'as' => 'createComment',
 	'middleware'=> 'auth',
-	'uses' => 'CommentsController@create',
+	'uses' => 'CommentController@create',
 ));
 
 
@@ -61,4 +61,28 @@ Route::post('/buscador',array(
 	'as' => 'buscador',
 	'middleware' => 'auth',
 	'uses' => 'HomeController@search',
+));
+
+Route::get('/like-post/{elemento}',array(
+	'as' => 'likePost',
+	'middleware' => 'auth',
+	'uses' => 'PostController@like',
+));
+
+Route::get('/unlike-post/{elemento}',array(
+	'as' => 'unlikePost',
+	'middleware' => 'auth',
+	'uses' => 'PostController@unlike',
+));
+
+Route::get('/like-comment/{elemento}',array(
+	'as' => 'likeComment',
+	'middleware' => 'auth',
+	'uses' => 'CommentController@like',
+));
+
+Route::get('/unlike-comment/{elemento}',array(
+	'as' => 'unlikeComment',
+	'middleware' => 'auth',
+	'uses' => 'CommentController@unlike',
 ));

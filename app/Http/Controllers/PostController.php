@@ -10,6 +10,7 @@ use Symfony\Component\HttpFoundation\Response;*/
 
 use App\Post;
 use App\Comment;
+use App\Like;
 use Storage;
 use Response;
 
@@ -47,8 +48,6 @@ class PostController extends Controller
 
 	public function delete($id, Request $request){
 
-		//DB::table('posts')->where('id',$id)->delete();
-
 		//Borro los comentarios asociados al post
 		$comments = DB::table('comments')->where('post_id',$id)->delete();
 
@@ -81,5 +80,23 @@ class PostController extends Controller
 		$file =  storage::disk('videos')->get($filename);
 		return Response($file);
 	}
+
+	public function like($id){
+
+		$registro = new Like();
+		$registro->user_id = auth()->user()->id;
+		$registro->post_id = $id;
+		$registro->comment_id = "0";
+		$registro->status = "0";
+		$registro->save();
+		return redirect('/home');
+
+	}
+
+	public function unlike($id){
+		$registro = Like::where('post_id', $id)->first();
+		$registro->delete();
+		return redirect('/home');
+	}	
 
 }

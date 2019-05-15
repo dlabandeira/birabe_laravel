@@ -43,7 +43,7 @@
     </div>   
 
     <div class="col-xs-12">
-        <div class="col-xs-6 text-left">{{ $post->comments->count() }} me gusta</div>
+        <div class="col-xs-6 text-left">{{ $post->likes->count() }} me gusta</div>
         <div class="col-xs-6 text-right">{{ $post->comments->count() }} comentarios</div>
     </div>
 
@@ -56,10 +56,14 @@
     <!--Barra -->
     <div class="col-xs-12">
         <div class="col-xs-6 text-center">
-            <a href="">Me gusta</a>
+            @if ($post->likes_user->count())
+                <a href="{{ route('unlikePost',$post->id) }}"><strong>Ya no me gusta</strong></a>
+            @else
+                <a href="{{ route('likePost',$post->id) }}"><strong>Me gusta</strong></a>
+            @endif
         </div>
         <div class="col-xs-6 text-center">
-            <a href="">Comentar</a>
+            <a href=""><strong>Comentar</strong></a>
         </div>
     </div>
 

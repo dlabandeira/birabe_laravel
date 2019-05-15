@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use \App\Comment;
+use \App\Like;
 
-class CommentsController extends Controller
+class CommentController extends Controller
 {
     //Metodos
     public function create(Request $request){
@@ -39,4 +40,22 @@ class CommentsController extends Controller
 		$comment->save();
 		return redirect('/home')->with('status','Tu comentario se ha insertado correctamente');
     }
+
+    public function like($id){
+
+		$registro = new Like();
+		$registro->user_id = auth()->user()->id;
+		$registro->post_id = "0";
+		$registro->comment_id = $id;
+		$registro->status = "0";
+		$registro->save();
+		return redirect('/home');
+
+	}
+
+	public function unlike($id){
+		$registro = Like::where('comment_id', $id)->first();
+		$registro->delete();
+		return redirect('/home');
+	}
 }

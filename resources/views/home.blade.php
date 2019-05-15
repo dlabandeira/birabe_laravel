@@ -20,7 +20,7 @@
                     @include('forms.post-new', array('user'=>auth()->user()))
                 </div>
             </div>
-
+            
             <ul class="panel-list">
                 @foreach($posts as $post)
 

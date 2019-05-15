@@ -13,6 +13,14 @@ class Comment extends Model
     	return $this->belongsTo('App\User','user_id');
     }
 
+   public function likes(){
+        return $this->hasMany('App\Like');
+    }
+
+    public function likes_user(){
+        return $this->hasMany('App\Like')->where('user_id','=', auth()->user()->id);
+    }
+
     public function comments(){
     	return $this->hasMany('App\Comment','comment_id')->orderBy('id','asc');
     }
