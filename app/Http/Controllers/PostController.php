@@ -97,6 +97,8 @@ class PostController extends Controller
 		$registro = Like::where('post_id', $id)->first();
 		$registro->delete();
 		return redirect('/home');
-	}	
+	}
+
+	
 
 }
