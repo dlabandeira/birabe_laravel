@@ -50,7 +50,10 @@ class HomeController extends Controller
         $comments = Comment::where("body", "LIKE", "%{$request->input('search-text')}%")->get();
         return view('data.buscador',array(
             'results_posts' => $posts, 
-            'results_comments' => $comments,          
+            'results_comments' => $comments,
+            'search' =>  $request->get('search-text'),        
         ));
+
+        //return response()->json($comments,200);
     }
 }

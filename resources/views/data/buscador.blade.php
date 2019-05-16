@@ -12,7 +12,7 @@
 				@include('data.search')
 			@endforeach
 		@else
-			<p>No hay resultados en las publicaciones para la búsqueda indicada</p>
+			<p>No hay resultados en las publicaciones para <strong>{{$search}}</strong></p>
 		@endif
 		
 		<h3>Resultados en Comentarios</h3>
@@ -22,7 +22,7 @@
 				@include('data.search')
 			@endforeach
 		@else
-			<p>No hay resultados en los comentarios para la búsqueda indicada</p>
+			<p>No hay resultados en los comentarios para <strong>{{$search}}</strong></p>
 		@endif
     </div>
 </div>

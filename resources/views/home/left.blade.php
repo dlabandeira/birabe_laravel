@@ -2,7 +2,7 @@
 	<div class="menu-lateral ">
 		<ul class="nav flex-column">
 			<li class="nav-item">
-				<a class="nav-link active text-center" href="#">@include('home.profile-image', array('image' =>  Auth::user()->image))</a>
+				<a class="nav-link active text-center" href="{{ route('viewUser',Auth::user()->id) }}">@include('home.profile-image', array('image' =>  Auth::user()->image))</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" href="#"><i class="fas fa-id-card"></i>Inicio</a>

@@ -86,3 +86,9 @@ Route::get('/unlike-comment/{elemento}',array(
 	'middleware' => 'auth',
 	'uses' => 'CommentController@unlike',
 ));
+
+Route::get('/user/{elemento}',array(
+	'as' => 'viewUser',
+	'middleware' => 'auth',
+	'uses' => 'UserController@show',
+));
